@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="container">
+            <div class="container" *ngFor="let trainS of trainsS">
+                    <form #myForm="ngForm" (ngSubmit)="updateTrainS(trainS.TrainName,trainS.TrainType,trainS.Classes,trainS.Monday,trainS.Tuesday,trainS.Wednesday,trainS.Thursday,trainS.Friday,trainS.Saturday,trainS.Sunday,trainS.StartStation,trainS.EndStation)">
+         <div class="form-row">
+          
+                 <!--div class="form-group col-md-6">
+                         <label for="inputName">Train Name</label>
+                         <input type="text" class="form-control" id="inputName" placeholder="Enter Name" name="name" [(ngModel)]="TrainName">
+                       </div-->
+
+                       <div class="form-group col-md-6">
+                        <label for="inputName" style="margin-top: 20%;">Train Name</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Enter Name" name="name" [(ngModel)]="trainS.TrainName" required>
+                        <div class="invalid-feedback">
+                               Please provide a name.
+                             </div>
+                      </div>
+
+                      <div class="form-group" style= "margin-right: 70%; width: 30%;">
+                        <label for="exampleSelect1">Train Type</label>
+                        <select class="form-control" id="exampleSelect1" name="type" [(ngModel)]="trainS.TrainType" >
+                          <option>Express</option>
+                          <option>Intercity</option>
+                          <option>Normal</option>
+                          
+                        </select>
+                       
+                      </div>
+      
+                      <div class="form-group" style="width: 30%;">
+                            <label for="exampleSelect2">Availabe Classes</label>
+                            <select class="form-control" id="exampleSelect2" name="class" [(ngModel)]="trainS.Classes" >
+                              <option>1st/2nd/3rd</option>
+                              <option>2nd/3rd</option>
+                              <option>3rd</option>
+                              
+                            </select>
+                           
+                          </div>
+
+                      
+             
+                              <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
+                                <label>Monday</label>
+                                <input type="number" name="monday" value="jio" class="form-control"  [(ngModel)]="trainS.Monday" >
+                                <div class="invalid-feedback">Please Select a Time</div>
+                             </div>
+                              <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
+                                <label>Tuesday</label>
+                                <input type="number" name="tuesday" class="form-control" [(ngModel)]="trainS.Tuesday" >
+                                <div class="invalid-feedback">Please Select a Time</div>
+                             </div>
+                             <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
+                                <label>Wednesday</label>
+                                <input type="number" name="wednesday" class="form-control" [(ngModel)]="trainS.Wednesday" >
+                                <div class="invalid-feedback">Please Select a Time</div>
+                             </div>
+                             <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
+                                <label>Thursday</label>
+                                <input type="number" name="thursday" class="form-control" [(ngModel)]="trainS.Thursday" >
+                                <div class="invalid-feedback">Please Select a Time</div>
+                             </div>
+                             <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
+                                <label>Friday</label>
+                                <input type="number" name="friday" class="form-control" [(ngModel)]="trainS.Friday" >
+                                <div class="invalid-feedback">Please Select a Time</div>
+                             </div>
+                             <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
+                                <label>Saturday</label>
+                                <input type="number" name="saturday" class="form-control" [(ngModel)]="trainS.Saturday" >
+                                <div class="invalid-feedback">Please Select a Time</div>
+                             </div>
+                             <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
+                                <label>Sunday</label>
+                                <input type="number" name="sunday" class="form-control" [(ngModel)]="trainS.Sunday" >
+                                <div class="invalid-feedback">Please Select a Time</div>
+                             </div>
+         
+
+                       <div class="form-group" style="margin-right:70%;  width: 30%;">
+                            <label for="exampleSelect1">Start Station</label>
+                            <select class="form-control" id="exampleSelect3" name="startstation" [(ngModel)]="trainS.StartStation">
+                              <option>Fort</option>
+                              <option>Galle</option>
+                              <option>Matara</option>
+                              
+                            </select>
+                          </div>
+          
+                          <div class="form-group" style="margin-right:70%; width: 30%;">
+                                <label for="exampleSelect2">End Station</label>
+                                <select class="form-control" id="exampleSelect4" name="endstation" [(ngModel)]="trainS.EndStation">
+                                  <option>Fort</option>
+                                  <option>Galle</option>
+                                  <option>Matara</option>
+                                  
+                                </select>
+                              </div>
+                              
+
+                                     <!--div class="form-group col-md-6">
+                         <label for="inputName">Stops</label>
+                         <input type="text" class="form-control" id="inputName" placeholder="" name="stops" >
+                       </div-->
+         
+         
+         </div>
+         <button type="submit" style="margin-top: 30px; margin-bottom: 20%;" class="btn btn-primary">Update</button>
+         <button type="button" class="btn btn-primary" style="margin-left: 20px; margin-top: 30px; margin-bottom: 20%;" routerLink="/train_schedule">Back</button>
+         
+       </form>
+       </div>
+     </div>
+     </div>
+     
+     <router-outlet></router-outlet>

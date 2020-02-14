@@ -1,0 +1,9 @@
+.form-valid  {
+    opacity:0.5;
+  }
+  
+  .form-control-label abbr {
+    text-decoration: none;
+    font-weight: normal;
+  }
+  

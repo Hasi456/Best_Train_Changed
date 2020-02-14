@@ -1,0 +1,52 @@
+
+
+
+<div class="container">
+    <div class="container">
+<!--input type="text" style="border-block-width:px;" placeholder="Search here"-->
+<button type="button" class="btn btn-info" style="margin-left: 85%; margin-bottom: 20px; margin-top: 15%;" routerLink="/add_trainSchedule">+ ADD NEW SHEADULE</button>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+       
+        <th scope="col">Train Name</th>
+        <th scope="col">Start Station</th>
+        <th scope="col">End Station</th>
+        <th scope="col">Monday</th>
+        <th scope="col">Tuesday</th>
+        <th scope="col">Wednesday</th>
+        <th scope="col">Thursday</th>
+        <th scope="col">Friday</th>
+        <th scope="col">Saturday</th>
+        <th scope="col">Sunday</th>
+        <th scope="col">StopAt</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let trainS of trainschedule">
+        
+        
+       
+        <!--td>T-00{{TrainS.TrainNo}}</td-->
+         <td><b>{{trainS.TrainName}}/  TrainNo: T00{{trainS.TrainNo}}</b></td>
+        <td><b>{{trainS.StartStation}}</b></td>
+        <td><b>{{trainS.EndStation}}</b></td>
+        <td><b>{{trainS.Monday}}</b></td>
+        <td><b>{{trainS.Tuesday}}</b></td>
+        <td><b>{{trainS.Wednesday}}</b></td>
+        <td><b>{{trainS.Thursday}}</b></td>
+        <td><b>{{trainS.Friday}}</b></td>
+        <td><b>{{trainS.Saturday}}</b></td>
+        <td><b>{{trainS.Sunday}}</b></td>
+        <td><b>{{trainS.StopAt}}</b></td>
+
+        <td><button type="button" class="btn btn-info" style="margin-left: 10px;"  [routerLink]="['/update_trainSchedule',trainS.TrainNo]">Edit</button>
+       <button type="button" class="btn btn-danger" style="margin-left: 10px; margin-top: 10px;" (click)="deleteTrainS(trainS.TrainNo)">Delete</button></td> 
+      </tr>
+      
+    </tbody>
+</table>
+</div>
+</div>
+<router-outlet></router-outlet>
