@@ -9,19 +9,21 @@
                          <input type="text" class="form-control" id="inputName" placeholder="Enter Name" name="name" [(ngModel)]="TrainName">
                        </div-->
 
-                       <div class="form-group col-md-6">
-                        <label for="inputName" style="margin-top: 20%;">Train Name</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Enter Name" name="name" [(ngModel)]="trainS.TrainName" required>
-                        <div class="invalid-feedback">
-                               Please provide a name.
-                             </div>
+                    
+                      <div class="form-group" style="margin-right: 70%; width: 30%; margin-top: 10%;">
+                        <label for="exampleSelect1">Train Name</label>
+                        <select class="form-control" id="exampleSelect1"  name="trainname"  [(ngModel)]="trainS.TrainName">
+                          
+                          <option *ngFor="let train of traindetail">{{train.TrainName}}/  TrainNo: T00{{train.TrainNo}}</option>
+                          
+                          
+                        </select>
                       </div>
 
                       <div class="form-group" style= "margin-right: 70%; width: 30%;">
-                        <label for="exampleSelect1">Train Type</label>
-                        <select class="form-control" id="exampleSelect1" name="type" [(ngModel)]="trainS.TrainType" >
+                        <label for="exampleSelect0">Train Type</label>
+                        <select class="form-control" id="exampleSelect0" name="type" [(ngModel)]="trainS.TrainType" >
                           <option>Express</option>
-                          <option>Intercity</option>
                           <option>Normal</option>
                           
                         </select>
@@ -43,37 +45,37 @@
              
                               <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
                                 <label>Monday</label>
-                                <input type="number" name="monday" value="jio" class="form-control"  [(ngModel)]="trainS.Monday" >
+                                <input type="time" pattern="[01]?[0-9]|2[0-3]:[0-5][0-9]" name="monday" value="jio" class="form-control"  [(ngModel)]="trainS.Monday" >
                                 <div class="invalid-feedback">Please Select a Time</div>
                              </div>
                               <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
                                 <label>Tuesday</label>
-                                <input type="number" name="tuesday" class="form-control" [(ngModel)]="trainS.Tuesday" >
+                                <input type="time" pattern="[01]?[0-9]|2[0-3]:[0-5][0-9]" name="tuesday" class="form-control" [(ngModel)]="trainS.Tuesday" >
                                 <div class="invalid-feedback">Please Select a Time</div>
                              </div>
                              <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
                                 <label>Wednesday</label>
-                                <input type="number" name="wednesday" class="form-control" [(ngModel)]="trainS.Wednesday" >
+                                <input type="time" pattern="[01]?[0-9]|2[0-3]:[0-5][0-9]" name="wednesday" class="form-control" [(ngModel)]="trainS.Wednesday" >
                                 <div class="invalid-feedback">Please Select a Time</div>
                              </div>
                              <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
                                 <label>Thursday</label>
-                                <input type="number" name="thursday" class="form-control" [(ngModel)]="trainS.Thursday" >
+                                <input type="time" pattern="[01]?[0-9]|2[0-3]:[0-5][0-9]" name="thursday" class="form-control" [(ngModel)]="trainS.Thursday" >
                                 <div class="invalid-feedback">Please Select a Time</div>
                              </div>
                              <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
                                 <label>Friday</label>
-                                <input type="number" name="friday" class="form-control" [(ngModel)]="trainS.Friday" >
+                                <input type="time" pattern="[01]?[0-9]|2[0-3]:[0-5][0-9]" name="friday" class="form-control" [(ngModel)]="trainS.Friday" >
                                 <div class="invalid-feedback">Please Select a Time</div>
                              </div>
                              <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
                                 <label>Saturday</label>
-                                <input type="number" name="saturday" class="form-control" [(ngModel)]="trainS.Saturday" >
+                                <input type="time" pattern="[01]?[0-9]|2[0-3]:[0-5][0-9]" name="saturday" class="form-control" [(ngModel)]="trainS.Saturday" >
                                 <div class="invalid-feedback">Please Select a Time</div>
                              </div>
                              <div class="form-group" style="margin-right:80%; width: 20%; margin-top: 20px;">
                                 <label>Sunday</label>
-                                <input type="number" name="sunday" class="form-control" [(ngModel)]="trainS.Sunday" >
+                                <input type="time" pattern="[01]?[0-9]|2[0-3]:[0-5][0-9]" name="sunday" class="form-control" [(ngModel)]="trainS.Sunday" >
                                 <div class="invalid-feedback">Please Select a Time</div>
                              </div>
          

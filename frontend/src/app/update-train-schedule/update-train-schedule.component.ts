@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UpdateTrainScheduleComponent implements OnInit {
 
     traindetails:any=[];
+    traindetail:any=[];
     trainsS:any=[];
     
   
@@ -28,6 +29,11 @@ export class UpdateTrainScheduleComponent implements OnInit {
         console.log(data);
       });
       
+      this.demoservice.getAllTrains().subscribe((data)=>{
+
+        this.traindetail=data;
+        console.log(data);
+      });
   
       let id=parseInt(this.route.snapshot.paramMap.get('id'));
        this.demoservice.getSByID(id).subscribe(res => {

@@ -17,13 +17,13 @@ export class AddTrainScheduleComponent implements OnInit {
   Classes:String;
   StartStation:String;
   EndStation:String;
-  Monday:number;
-  Tuesday:number;
-  Wednesday:number;
-  Thursday:number;
-  Friday:number;
-  Saturday:number;
-  Sunday:number;
+  Monday:Time;
+  Tuesday:Time;
+  Wednesday:Time;
+  Thursday:Time;
+  Friday:Time;
+  Saturday:Time;
+  Sunday:Time;
   StopAt:String;
   
 

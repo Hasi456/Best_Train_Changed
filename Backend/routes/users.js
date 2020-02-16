@@ -24,7 +24,7 @@ var sql="insert into Admin SET ?";
     });
 
 });
-
+*/
 
 router.post("/addTrain",(req,res)=>{
     //console.log(req.body);
@@ -43,7 +43,7 @@ router.post("/addTrain",(req,res)=>{
        
     });
 
-});/*
+});
 
 router.get("/train_details",(req,res)=>{
     
@@ -60,13 +60,13 @@ router.get("/train_details",(req,res)=>{
             //    message:"",
               rows
            
-           });*//*
+           });*/
            res.send(rows);
         
        // console.log(result);
     });
-});*/
-/*
+});
+
 router.post("/edit_train/:id",(req,res)=>{
 
    var sql="update train SET ? where TrainNo=?" 
@@ -86,9 +86,9 @@ router.post("/edit_train/:id",(req,res)=>{
 
      }
     });
-});*/
+});
 
-/*
+
 router.get("/findTrain/:id",(req,res)=>{
     
     var sql="select *from train where TrainNo=?";
@@ -106,7 +106,7 @@ router.get("/findTrain/:id",(req,res)=>{
         
        // console.log(result);
     });
-});*//*
+});
 
 router.get("/deleteTrain/:id",(req,res)=>{
 
@@ -128,7 +128,7 @@ router.get("/deleteTrain/:id",(req,res)=>{
 });
 
 });
-*/
+
 
 router.get("/train_schedule",(req,res)=>{
     

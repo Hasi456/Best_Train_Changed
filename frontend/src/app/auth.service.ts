@@ -13,9 +13,13 @@ export class AuthService {
 
   signUp(email:string, password: string){
  
-   firebase.auth().createUserWithEmailAndPassword(email,password).catch(
+   firebase.auth().createUserWithEmailAndPassword(email,password).then(
 
-    error=>console.log(error)
+   // error=>console.log(error)
+    response=>{
+      alert('Registration success');
+    },
+      error=>alert('REGISTRATION FAILED!!!')
 
    );
    

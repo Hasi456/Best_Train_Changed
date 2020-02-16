@@ -22,6 +22,7 @@ import {AuthService} from './auth.service';
 import { AddTrainScheduleComponent } from './add-train-schedule/add-train-schedule.component';
 import { UpdateTrainScheduleComponent } from './update-train-schedule/update-train-schedule.component';
 import { TrainScheduleComponent } from './train-schedule/train-schedule.component';
+import { HomepageComponent } from './homepage/homepage.component';
 //import {FlashMessagesModule} from 'angular2-flash-messages';
 
 
@@ -42,7 +43,8 @@ import { TrainScheduleComponent } from './train-schedule/train-schedule.componen
     HomeComponent,
     AddTrainScheduleComponent,
     UpdateTrainScheduleComponent,
-    TrainScheduleComponent
+    TrainScheduleComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

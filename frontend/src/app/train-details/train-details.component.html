@@ -11,8 +11,7 @@
         
         <th scope="col">Train No</th>
         <th scope="col">Train Name</th>
-        <th scope="col">Train Type</th>
-        <th scope="col">Available Classes</th>
+        <th scope="col">Classes</th>
         <th></th>
       </tr>
     </thead>
@@ -21,10 +20,9 @@
         <th scope="row">T-00{{train.TrainNo}}</th>
         
         <td>{{train.TrainName}}</td>
-        <td>{{train.TrainType}}</td>
-        <td>{{train.Classes}}</td>
-        <td><button type="button" class="btn btn-info" style="margin-left: 10px;"  [routerLink]="['/edit_train',train.TrainNo]">Edit</button>
-       <button type="button" class="btn btn-danger" style="margin-left: 10px;" (click)="deleteTrain(train.TrainNo)">Delete</button></td> 
+       <td>{{train.Classes}}</td>
+        <td><button type="button" class="btn btn-outline-primary" style="margin-left: 10px;"  [routerLink]="['/edit_train',train.TrainNo]">Edit</button>
+       <button type="button" class="btn btn-outline-danger" style="margin-left: 10px;" (click)="deleteTrain(train.TrainNo)">Delete</button></td> 
       </tr>
       
     </tbody>

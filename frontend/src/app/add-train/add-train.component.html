@@ -6,26 +6,14 @@
               
                      <div class="form-group col-md-6">
                              <label for="inputName" style="margin-top: 20%;">Train Name</label>
-                             <input type="text" class="form-control" id="inputName" placeholder="Enter Name" name="name" [(ngModel)]="TrainName" required>
+                             <input type="text" pattern="[01]?[0-9]|2[0-3]:[0-5][0-9]" class="form-control" id="inputName" placeholder="Enter Name" name="name" [(ngModel)]="TrainName" required>
                              <div class="invalid-feedback">
                                     Please provide a name.
                                   </div>
                            </div>
                            <div class="form-group" style= "margin-right: 70%; width: 30%;">
-                                <label for="exampleSelect1">Train Type</label>
-                                <select class="form-control" id="exampleSelect1" name="type" [(ngModel)]="TrainType" required>
-                                  <option>Express</option>
-                                  <option>Intercity</option>
-                                  <option>Normal</option>
-                                  
-                                </select>
-                                <div class="invalid-feedback">
-                                        Please Select a type.
-                                      </div>
-                              </div>
-              
-                              <div class="form-group" style="width: 30%;">
-                                    <label for="exampleSelect2">Availabe Classes</label>
+                               
+                                    <label for="exampleSelect2">Classes</label>
                                     <select class="form-control" id="exampleSelect2" name="class" [(ngModel)]="Classes" required>
                                       <option>1st/2nd/3rd</option>
                                       <option>2nd/3rd</option>

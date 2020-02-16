@@ -9,7 +9,7 @@ import {AddTrainSheduleComponent} from './add-train-shedule/add-train-shedule.co
 import {AddTrainScheduleComponent} from './add-train-schedule/add-train-schedule.component';
 import {UpdateTrainScheduleComponent} from './update-train-schedule/update-train-schedule.component';
 import {RegisterComponent} from './register/register.component';
-import {HomeComponent} from './home/home.component';
+import {HomepageComponent} from './homepage/homepage.component';
 import { Authguard } from './authguard';
 import {RandomGuard} from './randomguard';
  
@@ -25,7 +25,7 @@ const routes: Routes = [
   {path :'add_trainSchedule', component:AddTrainScheduleComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
   {path :'update_trainSchedule/:id', component:UpdateTrainScheduleComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
   {path :'register', component:RegisterComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
-  {path:'', component:HomeComponent,canActivate:[RandomGuard], canLoad:[RandomGuard]}
+  {path:'', component:HomepageComponent,canActivate:[RandomGuard], canLoad:[RandomGuard]}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

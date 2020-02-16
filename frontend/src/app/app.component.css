@@ -7,16 +7,16 @@ body {
 
 /*background: url('https://source.unsplash.com/twukN12EN7c/1920x1080');
 /*background: url('https://source.images.app.goo.gl/Ny52UTdt6VYCBA8g7') ;*/
-  background-image: url('../assets/images/train2.jpg');
+  background-image: url('../assets/images/bg1.jpg');
     -webkit-background-size:100%;
     -moz-background-size: 100%;
     background-size:100%;
     -o-background-size:100%;
     margin-bottom: 0%;
-    background-size: cover;
+    background-size:auto;
     
     background-repeat:repeat;
-    background-position: top;
+    background-position:top;
 }
 
 .feather {
@@ -70,7 +70,7 @@ body {
   }
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
+  color:  #999;
  
 }
 

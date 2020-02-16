@@ -46,8 +46,8 @@ body {
        
       
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">BestTrain</a>
-  <label style="font-size: 30px; color: lightcyan; margin-right: 30%; margin-left: 20%;">Admin Panel</label>
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#" style="font-size: x-large; font-family: cursive;">Best Train</a>
+  <label style="font-size: 30px; color: lightcyan; font-family:cursive; margin-right: 40%; margin-left: 10%;">Admin Panel</label>
   <!--ul class="navbar-nav px-3"-->
   
         <div class="nav-item" *ngIf="checkUserLoggedIn()">
@@ -61,23 +61,23 @@ body {
 
 <div class="container-fluid">
   <div class="row">
-    <nav class="col-md-2 d-none d-md-block sidebar" style="background-color:cadetblue;">
+    <nav class="col-md-2 d-none d-md-block sidebar" *ngIf="checkUserLoggedIn()" style="background-color:#2A0A0A;">
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" routerLink="/home">
+            <a class="nav-link active" style="font-family: cursive;" routerLink="/">
               <span data-feather="home"></span>
               Home<span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/train_details">
+            <a class="nav-link" style="font-family: cursive;" routerLink="/train_details">
               <span data-feather="file"></span>
               Trains
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/train_schedule">
+            <a class="nav-link" style="font-family: cursive;" routerLink="/train_schedule">
               <span data-feather="shopping-cart"></span>
               Train Schedule
             </a>

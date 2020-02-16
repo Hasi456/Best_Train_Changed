@@ -2,15 +2,15 @@
 const mysql=require('mysql');
 
 const conn=mysql.createConnection({
-    host:"localhost",
+   /* host:"localhost",
     user:"root",
     password:"",
     database:"besttrain"
-/*
+*/
     host:"sql12.freemysqlhosting.net",
     user:"sql12322378",
     password:"dBbRczdtnt",
-    database:"sql12322378"*/
+    database:"sql12322378"
 });
 
 conn.connect(function(err){
