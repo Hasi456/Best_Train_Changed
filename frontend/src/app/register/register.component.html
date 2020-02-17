@@ -34,11 +34,12 @@
         </form>
         </div>
         <router-outlet></router-outlet-->
-        
-          
-<div class="container">
+            
+<div class="container" style=" margin-left: 20%;">
   <form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm">
-    <div class="form-group" style="margin-top: 20%;" >
+    <div class="form-group" style="margin-top: 10%;" >
+      
+     <h1 style="font-family: cursive; margin-bottom: 10%; margin-left: 10%;">Register New Admin</h1> 
       
       <label for="lblusername">Email:</label>
       <input type="email" style="width:30%" class="form-control" id="Uname" (ngModel)="email" name="email" aria-describedby="emailHelp" placeholder="Enter Email"  required>

@@ -19,7 +19,8 @@ export class AuthService {
     response=>{
       alert('Registration success');
     },
-      error=>alert('REGISTRATION FAILED!!!')
+     // error=>console.log(error)
+      error=>window.alert(error)
 
    );
    
@@ -35,7 +36,9 @@ export class AuthService {
         this.getCurrentUserToken();
         
       },
-              error=>alert('Invalid Login')
+         // error=>console.log(error)
+                error=>window.alert(error)
+            //  error=>alert('Invalid Login')
           
               
     );
